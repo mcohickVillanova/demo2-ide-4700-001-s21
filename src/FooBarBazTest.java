@@ -22,5 +22,17 @@ class FooBarBazTest {
     void testTransformWhenDivByFive() {
         assertEquals("bar", fbb.transform(5));
     }
+    
+    @Test
+    void testTransform() {
+    	FooBarBaz temp = new FooBarBaz();
+    	assertEquals("bar", fbb.transform(10));
+    	assertEquals("foo", fbb.transform(3));
+    }
+    
+    @Test
+    void testTransformNone() {
+    	assertEquals("4", fbb.transform(4));
+    }
 
 }
